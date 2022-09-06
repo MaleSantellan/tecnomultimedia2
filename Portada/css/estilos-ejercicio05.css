@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=Poppins:wght@300&display=swap');
+body, h1,h4, ul, li,ol{
+  margin:0;
+  padding:0;
+}
+h3{
+  color: #FF81AB ;
+}
+h1{
+  text-align: center;
+  font-size: 50px;
+  color: white;
+}
+body, h1,{
+  font-family: 'Yeseva One', cursive;
+}
+/*selectores de etiquetas HTML*/
+body{
+  background-image: url(../img/firmaH.png);
+}
+h5,h3, h4, p, a, ul,ol{
+    font-family: 'Poppins', sans-serif;
+}
+/*selectores personalizados*/
+.contenedor{
+  width: 900px;
+  background-color: white;
+  margin: 50px auto;
+}
+.encabezado{
+  background-color: #FF81AB;
+  padding: 20px;
+}
+.img-portada{
+  background-image: url(../img/portada.jpg);
+  height: 300px;
+  font-size: 30px;
+  color: white;
+  padding: 50px 700px 50px 20px;
+}
+.cuerpo{
+  padding: 20px;
+}
+.pie{
+  background-color: #91FFE3;
+  padding: 20px;
+  text-align: center;
+}
+.vinculo{
+  color: #000728;
+}
+.vinculo:hover{
+  background-color: #000728;
+  color: white;
+  text-decoration: none;
+}
+.bio{
+  border-bottom: 2px solid black;
+  border-top: 2px solid black;
+}
+.vid-per{
+  border-bottom: 2px solid black;
+}
+.giras{
+padding-bottom: 20px;
+  border-top: 2px solid black;
+}
+.film{
+  border-top: 2px solid black;
+}
+.premios{
+  border-top: 2px solid black;
+}
+.disc1{
+  width:100%;
+  display: flex;
+}
+.disc2{
+  width:100%;
+  display: flex;
+  border-bottom: 2px solid black;
+}
+.list{
+  padding: 15px;
+  margin-top: 10px;
+}
+.list h4{
+  color: pink;
+}
+.video1{
+  padding: 20px;
+  text-align: center;
+}
+.video2{
+  padding: 20px;
+  padding-top: 20px;
+  text-align: center;
+}
+.menu{
+  background-color: pink;
+}
+.item-m{
+  display: inline-block;
+  padding: 10px;
+}
+
+/*del selector item-m se cambia la etiqueta a*/
+.item-m a{
+  color: #FEFC57;
+  text-decoration: none;
+  padding:10px;
+}
+
+.item-m a:hover{
+  padding: 10px;
+  background-color: #FEFC57;
+  color: pink;
+  text-decoration: none;
+}
+
+.bio a {
+  color: #FF81AB;
+  text-decoration: none;
+}
+.bio a:hover{
+  background-color: #FF81AB;
+  color: #FEFC57;
+  text-decoration: none;
+}
+.vid-per a {
+  color: #FF81AB;
+  text-decoration: none;
+}
+.vid-per a:hover{
+  background-color: #FF81AB;
+  color: #FEFC57;
+  text-decoration: none;
+}
+.disc a {
+  color: #FF81AB;
+  text-decoration: none;
+}
+.disc a:hover{
+  background-color: #FF81AB;
+  color: #FEFC57;
+  text-decoration: none;
+}
+.vid a {
+  color: #FF81AB;
+  text-decoration: none;
+}
+.vid a:hover{
+  background-color: #FF81AB;
+  color: #FEFC57;
+  text-decoration: none;
+}
+.premios a {
+  color: #FF81AB;
+  text-decoration: none;
+}
+.premios a:hover{
+  background-color: #FF81AB;
+  color: #FEFC57;
+  text-decoration: none;
+}
+.film a {
+  color: #FF81AB;
+  text-decoration: none;
+}
+.film a:hover{
+  background-color: #FF81AB;
+  color: #FEFC57;
+  text-decoration: none;
+}
+.giras a {
+  color: #FF81AB;
+  text-decoration: none;
+}
+.giras a:hover{
+  background-color: #FF81AB;
+  color: #FEFC57;
+  text-decoration: none;
+}

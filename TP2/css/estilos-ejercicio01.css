@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Playfair+Display&display=swap');
+/*selectores de etiquetas HTML*/
+body{
+  background-image: url(../img/firmaH.png);
+}
+h1{
+    font-family: 'Abril Fatface', cursive;
+
+  }
+h5, h4,p,a{
+  font-family: 'Poppins', sans-serif;
+
+}
+/*selectores personalizados*/
+.contenedor{
+  text-align: center;
+  background-color: white;
+  margin: 50px auto;
+  padding: 20px;
+  border: 2px solid black;
+  border-radius: 8px;
+}
+.tamaño-foto{
+  width: 500px;
+
+}

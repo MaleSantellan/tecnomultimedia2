@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=Poppins:wght@300&display=swap');
+body, h1{
+  font-family: 'Yeseva One', cursive;
+  padding: 0;
+  margin: 0;
+}
+/*selectores de etiquetas HTML*/
+body{
+  background-image: url(../img/firmaH.png);
+}
+h5,h3, h4, p, a, ul{
+    font-family: 'Poppins', sans-serif;
+}
+/*selectores personalizados*/
+.contenedor{
+  width: 700px;
+  background-color: white;
+  margin: 50px auto;
+}
+.encabezado{
+  background-color: #FF81AB;
+  padding: 20px;
+}
+.img-portada{
+  background-image: url(../img/portada.jpg);
+  height: 300px;
+  font-size: 24px;
+  color: white;
+  padding: 50px 400px 50px 20px;
+}
+.cuerpo{
+  padding: 20px;
+}
+.pie{
+  background-color: #91FFE3;
+  padding: 20px;
+  text-align: center;
+}
+.vinculo{
+  color: #000728;
+}
+.vinculo:hover{
+  color: #FF81AB;
+  text-decoration: none;
+}
+.video{
+  padding: 20px;
+  text-align: center;
+
+}

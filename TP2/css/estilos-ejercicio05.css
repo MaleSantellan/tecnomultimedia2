@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Corinthia&family=Passions+Conflict&display=swap');
+
+h3{
+  color: #FF81AB ;
+}
+h1{
+  text-align: center;
+  font-size: 90px;
+  color: white;
+  font-family: 'Corinthia', cursive;
+}
+
+/*selectores de etiquetas HTML*/
+body{
+  background-image: url(../img/images.png);
+}
+h5,h3, h4, p, a, ul,ol{
+    font-family: 'Poppins', sans-serif;
+    color:
+}
+/*selectores personalizados*/
+.contenedor{
+  background-color: white;
+  margin: 50px auto;
+
+}
+.encabezado h4{
+  text-align: center;
+}
+.imagen {
+image-orientation: CENTER;
+}
+.tp1 a{
+  color: #FF81AB;
+  text-decoration: none;
+}
+.tp1 a:hover{
+  background-color: #FF81AB;
+  color: #FEFC57;
+  text-decoration: none;
+}
+.tp2 a{
+  color: #FF81AB;
+  text-decoration: none;
+}
+.tp2 a:hover{
+  background-color: #FF81AB;
+  color: #FEFC57;
+  text-decoration: none;
+}
+.tp3 a{
+  color: #FF81AB;
+  text-decoration: none;
+}
+.tp3 a:hover{
+  background-color: #FF81AB;
+  color: #FEFC57;
+  text-decoration: none;
+}
+.tp4 a{
+  color: #FF81AB;
+  text-decoration: none;
+}
+.tp4 a:hover{
+  background-color: #FF81AB;
+  color: #FEFC57;
+  text-decoration: none;
+}
+.tp5 a{
+  color: #FF81AB;
+  text-decoration: none;
+}
+.tp5 a:hover{
+  background-color: #FF81AB;
+  color: #FEFC57;
+  text-decoration: none;
+}
+.tp6 a{
+  color: #FF81AB;
+  text-decoration: none;
+}
+.tp6 a:hover{
+  background-color: #FF81AB;
+  color: #FEFC57;
+  text-decoration: none;
+}

@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ejercicio 05</title>
+  <meta charset="utf-8">
+
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+  <link rel="stylesheet" href="css/estilos-ejercicio05.css">
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <link rel="icon" type="image/png" href="img/girasol1.png">
+</head>
+
+<body>
+  <!--ENCABEZADO -->
+  <div class="encabezado">
+    <div class="parallax-container">
+      <div class="parallax"> <img src="img/sunset.jpg"></div>
+      <h1 class="yellow-text text-lighten-1"> Malena Santellán</h1>
+      <h4 class="yellow-text text-lighten-1">Tecnología Web</h4>
+      <h4 class="yellow-text text-lighten-1">Número de Legajo: 88115/7</h4>
+      <h4 class="yellow-text text-lighten-1">Año 2021</h4>
+    </div>
+  </div>
+
+  <div class="container contenedor">
+
+    <!--MENU -->
+    <div class="row">
+      <div class="s12">
+        <nav id="inicio">
+          <div class="nav-wrapper">
+            <ul class="left hide-on-med-and-down">
+              <li><a href="#tp1">Trabajo #1</a></li>
+              <li><a href="#tp2">Trabajo #2</a></li>
+              <li><a href="#tp3">Trabajo #3</a></li>
+              <li><a href="#tp4">Trabajo #4</a></li>
+              <li><a href="#tp5">Trabajo #5</a></li>
+              <li><a href="#tp6">Trabajo #6</a></li>
+            </ul>
+          </div>
+
+        </nav>
+      </div>
+    </div>
+    <!--TRABAJO 1-->
+    <div class="row">
+      <div class="col s12 m12">
+        <div class="tp1">
+          <h4 id="tp1" class="amber-text text-lighten-1">Trabajo Práctico #1  <a href="#inicio">↑</a></h4>
+        </div>
+
+        <h5 class="amber-text text-lighten-1">Círculo Cromático</h5>
+        <a class="waves-effect waves-light orange darken-4 btn modal-trigger" href="#cod1">Código</a>
+
+        <div id="cod1" class="modal">
+          <div class="modal-content">
+            <h4>Código Trabajo #1</h4>
+            <p>size(400,400);<br>
+              background(255);<br>
+              noStroke();<br>
+              fill(255,0,0);//rojo<br>
+              triangle(150,100,200,10,250,100);<br>
+              fill(255,255,0);//amarillo<br>
+              triangle(250,100,350,100,300,190);<br>
+              fill(255,0,255);//magenta<br>
+              triangle(150,100,50,100,100,190);<br>
+              fill(0,0,255);//azul<br>
+              triangle(100,190,50,280,150,280);<br>
+              fill(0,255,255);//cian<br>
+              triangle(150,280,200,370,250,280);<br>
+              fill(0,255,0);//verde<br>
+              triangle(250,280,300,190,350,280);<br>
+              <br>
+              //colores secundarios<br>
+              fill(238,130,238);//violeta<br>
+              quad(100,190,75,235,20,190,75,145);<br>
+              fill(173,255,47);//verde lima<br>
+              quad(300,190,325,235,380,190,325,145);<br>
+              fill(255,165,0);//naranja<br>
+              quad(250,100,302,100,290,30,227,60);<br>
+              //  (250,100,302,100,(290,30),(227,60)<br>
+              fill(255,105,180); //fucsia<br>
+              quad(150,100,100,100,110,30,172,60);<br>
+              fill(0,250,154); //verde cian<br>
+              quad(250,280,302,280,298,360,225,323);<br>
+              fill(0, 191, 255);//azur<br>
+              quad(150,280,175,323,100,360,100,280);<br>
+              <br>
+              //lineas interiores<br>
+              stroke(0);<br>
+              strokeWeight(1);<br>
+              noFill();<br>
+              triangle(200,100,128,240,272,240);<br>
+              line(200,100,200,280);<br>
+              line(128,140,272,240);<br>
+              line(272,140,128,240);<br>
+            </p>
+
+          </div>
+          <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-orange btn-flat">Listo</a>
+          </div>
+        </div>
+
+        <p>Para este trabajo práctico, tuvimos que dibujar nuestra propia version de un círculo cromático con colores primarios, secundarios y terciarios (RGB).</p>
+        <div class="s12 m12">
+          <img src="img/tp1.jpg" alt="trabajo practico 1" class="imagen">
+        </div>
+
+      </div>
+    </div>
+
+    <div class="divider"></div>
+    <!--TRABAJO 2-->
+    <div class="row">
+      <div class="col s12 m12">
+        <div class="tp2">
+          <h4 id="tp2" class="amber-text">Trabajo Práctico #2  <a href="#inicio">↑</a></h4>
+        </div>
+
+        <h5 class="amber-text"1>Animación Créditos</h5>
+        <a class="waves-effect waves-orange orange darken-4 btn modal-trigger" href="#cod2">Código</a>
+        <div id="cod2" class="modal">
+          <div class="modal-content">
+            <h4>Código Trabajo #2</h4>
+            <p>//---Creditos de Toradora!---//<br>
+              //-Variables numericas-//<br>
+              float posx, posy, dir, tam, segundos, grosor;<br>
+              float px, py;<br>
+              float mov;<br>
+              float vel;<br>
+              int t, sw;<br>
+              float dy, dx, dirx, diry;<br>
+              //-Variables de color-//<br>
+              color c1;<br>
+              //-Vaiables de texto-//<br>
+              PFont titulo, personajes;<br>
+              String estado; <br>
+              //-Variables de imagen-//<br>
+              PImage ryuji;<br>
+              PImage taiga;<br>
+              PImage creador;<br>
+              PImage jcs;<br>
+              <br>
+              void setup(){<br>
+                size (600,400);<br>
+                background(255);<br>
+                //-valores iniciales-//<br>
+                t = 100;<br>
+                px =600;<br>
+                py=400;<br>
+                mov= random(2,40);<br>
+                sw=5;<br>
+                vel = 2;<br>
+                dx = width/2;<br>
+                dy = height/2;<br>
+                dirx = random(-2,2);<br>
+                diry= random(-2,2);<br>
+                taiga = loadImage("taiga.png");<br>
+                ryuji= loadImage("ryuiji.png");<br>
+                creador = loadImage("creador.png");<br>
+                jcs= loadImage("jcs.png");<br>
+                personajes = loadFont ("Arial-Black-100.vlw");<br>
+                titulo = loadFont("Please_write_me_a_song-100.vlw");<br>
+                c1 = color(random(255), random(255), random(255));<br>
+              }<br>
+              void draw(){<br>
+                //-Segundero-//<br>
+                if (frameCount%30 == 0) { <br>
+                  segundos++; <br>
+                }<br>
+                <br>
+                //-Secuencia de aparicion-//<br>
+                if(segundos<=1 && segundos <=5){<br>
+                  estado= "inicio";<br>
+                } else if (segundos>= 6 && segundos <=6.5){<br>
+                  estado= "to";<br>
+                } else if (segundos>= 7 && segundos <=7.5){<br>
+                  estado = "ra";<br>
+                } else if (segundos>= 8 && segundos <=8.5){<br>
+                  estado = "do";<br>
+                } else if (segundos>= 9 && segundos <=9.5){<br>
+                  estado = "ra2"; <br>
+                } else if (segundos>=10 && segundos <=10.5){<br>
+                  estado= "!";<br>
+                }else if (segundos>=11 && segundos <=12){<br>
+                  estado = "takasu"; <br>
+                }else if (segundos>=21 && segundos <= 22){<br>
+                  estado = "aisaka"; <br>
+                }else if (segundos>=28&& segundos <= 31){<br>
+                  estado = "creador"; <br>
+                }else if (segundos>=31.5 && segundos <= 50){<br>
+                  estado = "director"; <br>
+                }else if (segundos>=50.5 && segundos <= 55){<br>
+                  estado = "estudio"; <br>
+                }<br>
+                <br>
+                //-Estados: pantallas-//<br>
+                <br>
+                //---INICIO---//<br>
+                if(estado.equals("inicio")){<br>
+                  float opaco = map(segundos,0,20,0,255);<br>
+                  fill(255,opaco);<br>
+                  noStroke();<br>
+                  rect(0,0,600,400);<br>
+                  c1 = color(random(255), random(255), random(255));<br>
+                  posx = random(width);<br>
+                  posy = random(height);<br>
+                  tam = random(90,200);<br>
+                  grosor = random(0,20);<br>
+                  noFill();<br>
+                  stroke(c1);<br>
+                  strokeWeight(grosor);<br>
+                  ellipse(posx,posy,tam,tam);<br>
+                }<br>
+                <br>
+                //-Titulo-//<br>
+                //TO<br>
+                if(estado.equals("to")){<br>
+                  stroke(255);<br>
+                  strokeWeight(sw);<br>
+                  fill(236, 92, 162);<br>
+                  ellipse(80,200,t,t);<br>
+                  textFont(titulo);<br>
+                  textSize(80);<br>
+                  fill(255);<br>
+                  text("To",60,220);<br>
+                }<br>
+                <br>
+                //RA<br>
+                if(estado.equals("ra")){<br>
+                  stroke(255);<br>
+                  strokeWeight(sw);<br>
+                  fill(248, 150, 87);<br>
+                  ellipse(190,200,t,t);<br>
+                  textFont(titulo);<br>
+                  fill(255);<br>
+                  text("ra",160,220);<br>
+                }<br>
+                <br>
+                //DO<br>
+                if(estado.equals("do")){<br>
+                  stroke(255);<br>
+                  strokeWeight(sw);<br>
+                  fill(95, 204, 245);<br>
+                  ellipse(300,200,t,t);<br>
+                  textFont(titulo);<br>
+                  fill(255);<br>
+                  text("do",270,220);<br>
+                }<br>
+                <br>
+                //RA2<br>
+                if(estado.equals("ra2")){<br>
+                  stroke(255);<br>
+                  strokeWeight(sw);<br>
+                  fill(205, 180, 110);<br>
+                  ellipse(410,200,t,t);<br>
+                  textFont(titulo);<br>
+                  fill(255);<br>
+                  text("ra",380,220);<br>
+                }<br>
+                <br>
+                //!<br>
+                if(estado.equals("!")){<br>
+                  stroke(255);<br>
+                  strokeWeight(sw);<br>
+                  fill(242, 85, 102);<br>
+                  ellipse(520,200,t,t);<br>
+                  textFont(titulo);<br>
+                  fill(255);<br>
+                  text("!",520,220);<br>
+                }<br>
+                <br>
+                //---PERSONAJES---//<br>
+                //1°<br>
+                if(estado.equals("takasu")){<br>
+                  float opaco2 = map(segundos,8,20,0,255);<br>
+                  fill(255,opaco2);<br>
+                  noStroke();<br>
+                  rect(0,0,600,400);<br>
+                  textFont(personajes);<br>
+                  fill( 250, 153, 12, opaco2);<br>
+                  text("RYUJI",px,200);<br>
+                  text("TAKASU",px,300);<br>
+                  px-=vel;<br>
+                  imageMode(CENTER);<br>
+                  image(ryuji,500,py+700,400,900);<br>
+                  py-=vel;<br>
+                }<br>
+                <br>
+                //2°<br>
+                if(estado.equals("aisaka")){<br>
+                  float opaco2 = map(segundos,20,25,0,255);<br>
+                  fill(255,opaco2);<br>
+                  noStroke();<br>
+                  rect(0,0,600,400);<br>
+                  textFont(personajes);<br>
+                  fill(236, 92, 162, opaco2);<br>
+                  text("TAIGA",px-150,200);<br>
+                  text("AISAKA",px-150,300);<br>
+                  px+=vel;<br>
+                  imageMode(CENTER);<br>
+                  image(taiga,100,py+1050,400,900);<br>
+                  py-=vel;<br>
+                }<br>
+                <br>
+
+                //---CREADOR---//<br>
+                <br>
+                if(estado.equals("creador")){<br>
+                  noStroke();<br>
+                  fill(255);<br>
+                  rect(0,0,600,400);<br>
+                  image(creador,px-200,200,800,600);<br>
+                  px+=1;<br>
+                  textFont(personajes);<br>
+                  textSize(50);<br>
+                  fill(157, 224, 247);<br>
+                  text("CREADOR",30,py+500);<br>
+                  textSize(90);<br>
+                  fill(89, 204, 243);<br>
+                  text("YUYUKO",30,py+570);<br>
+                  text("TAKEMIYA",50,py+640);<br>
+                  py+=vel;<br>
+                  <br>
+
+                }<br>
+                <br>
+                //---ESTUDIO---//<br>
+                if(estado.equals("director")){<br>
+                  float opaco2 = map(segundos,30,35,0,255);<br>
+                  fill(255,opaco2);<br>
+                  noStroke();<br>
+                  rect(0,0,600,400);<br>
+                  textFont(personajes);<br>
+                  textSize(50);<br>
+                  fill(239, 225, 196);<br>
+                  text("DIRECTOR",px,130);<br>
+                  textSize(90);<br>
+                  fill(206, 182, 108);<br>
+                  text("TATSUYUKI",px,200);<br>
+                  text("NAGAI",px,290);<br>
+                  px-=vel;<br>
+                }<br>
+                <br>
+                //---DIRECTOR---//<br>
+                if(estado.equals("estudio")){<br>
+                  fill(255);<br>
+                  noStroke();<br>
+                  rect(0,0,600,400);<br>
+                  if (dx>= width-400/2||dx< 400/2){<br>
+                    dirx = dirx *-1;<br>
+                  }<br>
+                  if (dy>= height-100/2||dy< 100/2){<br>
+                    diry = diry *-1;<br>
+                  }<br>
+                  image(jcs,dx,dy,400,100);<br>
+                  dx = dx+dirx;<br>
+                  dy = dy+diry;<br>
+                }<br>
+              }<br>
+              <br>
+              //BOTON DE REINICIO<br>
+              void keyPressed(){<br>
+                if(keyCode== ENTER){<br>
+                  segundos=0;<br>
+                  px=600;<br>
+                  py=400;<br>
+                }<br>
+                <br>
+              }<br>
+            </p>
+
+          </div>
+          <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-orange btn-flat">Listo</a>
+          </div>
+        </div>
+
+        <p>Para este trabajo práctico tuvimos que crear una animación con la secuencia de créditos de una película o videojuego seleccionado. el cual debia contener al menos cinco secuencias de información.</p>
+        <p>Yo arme la secuencia de creditos de "TORADORA!", un anime que me gusta mucho.</p>
+        <div class="slider">
+          <ul class="slides">
+            <li>
+              <img src="img/tp2.jpg"> <!-- random image -->
+            </li>
+            <li>
+              <img src="img/tp2.2.jpg"> <!-- random image -->
+            </li>
+            <li>
+              <img src="img/tp2.3.jpg"> <!-- random image -->
+            </li>
+            <li>
+              <img src="img/tp2.4.jpg"> <!-- random image -->
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+    <!--TRABAJO 3-->
+    <div class="row">
+      <div class="col s12 m12">
+        <div class="tp3">
+          <h4 id="tp3" class="amber-text text-darken-1">Trabajo Práctico #3  <a href="#inicio">↑</a></h4>
+        </div>
+
+        <h5 class="amber-text text-darken-1">Ilusion Óptica</h5>
+        <a class="waves-effect waves-light orange darken-4 btn modal-trigger" href="#cod3">Código</a>
+
+        <div id="cod3" class="modal">
+          <div class="modal-content">
+            <h4>Código Trabajo #3</h4>
+            <p>int ancho, alto;<br>
+              int cant=10;<br>
+              int cantcirc=15;<br>
+              void setup(){<br>
+                size (500,500);<br>
+                surface.setResizable(true); <br>
+                mouseX =  width/2;<br>
+                mouseY = height/2;<br>
+              }<br>
+              <br>
+              void draw(){<br>
+                background(0);<br>
+                ancho=width/cant;<br>
+                alto= height/cant;<br>
+                //--para la grilla de circulos--//<br>
+                //me crea todos los circulos en x (filas<br>
+                for (int x=0; x<cant; x++){ <br>
+                  //me crea todos los circulos en y (columnas<br>
+                  for (int y=0; y<cant; y++){ <br>
+                    ellipseMode(CORNER);<br>
+                    ellipse(x*ancho,y*alto,ancho,alto);<br>
+                    <br>
+                    //--para los circulos uno adentro del otro--//<br>
+                    for(int c=0; c<cantcirc; c++){<br>
+                      float tamc = map(c, 0, cantcirc-1 , ancho, 2);<br>
+                      <br>
+                      //Variables para interactividad de color<br>
+                      colorMode(HSB, width, 100, 100);<br>
+                      float arcoiris = map(c,0, cantcirc-1,0, 360);<br>
+                      float grosor = map(c, 0, cant-1, 5, 2  );<br>
+                      <br>
+                      //a que distancia estamos de cada ellipse con respecto a la<br> posicion del mouse<br>
+                      float distan = dist(mouseX, mouseY, x*ancho, y*alto);<br>
+                      //lo mas lejos que puede estar el mouse de alguna de las celdas <br>
+                      float disMaxima = dist(0, 0, width, height);<br>
+                      //mientras el mouse se mueva de 0 a distancia maxima, <br>
+                      //va a ir cambiando el color, desde el mayor valor, a un valor<br> determinado por mi <br>
+                      float cborde = map(distan, 0, disMaxima, width, 60); <br>
+                      <br>
+                      //--variabes para interactividad de movimiento--//<br>
+                      //la primera repetición, la primera ellipse,coincida con el<br> centro de la celda que lo contiene <br>
+                      //y la ultima, coincida con mouse x y mouse y respectivamente. <br>
+                      //constrain es para limitar el rango en el que se va a realizar<br> esta interaccion con el mouse<br>
+                      float posx = map(c, 0, cantcirc-1, x*ancho+ancho/2,<br> constrain(mouseX,x*ancho+ancho/8,(x+1)*ancho-ancho/8)); <br>
+                      float posy = map(c, 0, cantcirc-1, y*alto+alto/2, constrain<br> (mouseY,y*alto+alto/8, (y+1)*alto-alto/8));
+
+                      //para que se aplique el efecto de color sobre todas las ellipses<br>
+                      stroke(cborde, 100, 1000);<br>
+                      ellipseMode(CENTER);<br>
+                      <br>
+                      //para que cada ellipse tenga un color de arcoiris individual<br>
+                      //y para que aquellas impares, no tengan fill<br>
+                      if (c%2==0) {<br>
+                        stroke(arcoiris, 100, 100);<br>
+                        strokeWeight(grosor);<br>
+                      } else {<br>
+                        noFill();<br>
+                      }<br>
+                      ellipse(posx, posy, tamc, tamc);<br>
+                    }<br>
+                    <br>
+                  }<br>
+                }<br>
+              }<br>
+              <br>
+              //--BOTON DE REINICIO--//<br>
+              //los valores del mouse vuelven al medio al hacer click<br>
+              void mousePressed(){<br>
+                mouseX =  width/2;<br>
+                mouseY = height/2;<br>
+              }<br>
+              <br>
+            </p>
+
+          </div>
+          <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-orange btn-flat">Listo</a>
+          </div>
+        </div>
+        <p>Para este trabajo práctico tuvimos que crear una ilusión óptica interactiva con estructuras repetitivas (ciclos flor).</p>
+        <p>Yo quise armar una grilla de circulos, los cuales se fueran repitiendo a su vez internamente, formando un espiral dentro de cada circulo de la grilla. </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col s12 m4">
+        <h6>Sketch</h6>
+        <img src="img/tp3.3.jpg" alt=""class="responsive-img">
+      </div>
+      <div class="col s12 m4">
+        <h6>Trabajo Resuelto</h6>
+        <img src="img/tp3.jpg" alt=""class="responsive-img">
+      </div>
+      <div class="col s12 m4">
+        <h6>Con interacción realizada</h6>
+        <img src="img/tp3.2.jpg" alt=""class="responsive-img">
+      </div>
+    </div>
+
+    <div class="divider"></div>
+    <!--TRABAJO 4-->
+    <div class="row">
+      <div class="col s12 m12">
+        <div class="tp4">
+          <h4 id="tp4" class=" amber-text text-darken-2">Trabajo Práctico #4  <a href="#inicio">↑</a> </h4>
+        </div>
+
+        <h5 class=" amber-text text-darken-2">Aventura Gráfica</h5>
+        <a class="waves-effect waves-light orange darken-4 btn modal-trigger" href="https://github.com/MaleSantellan/tecnomultimedia/tree/tp4">Código en Github</a>
+        <p>Para este trabajo tuvimos que crear una aventura gráfica que haga uso de arreglos y funciones.</p>
+        <p>Yo decidí crear la aventura a partir de la "Fabula de los tres hermanos" de Harry Potter, donde se explica mediante este cuento, como se crearon las reliquias de la muerte.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="carousel">
+        <a class="carousel-item" href="#one!"><img src="img/tp4.jpg"></a>
+        <a class="carousel-item" href="#two!"><img src="img/tp4.2.jpg" ></a>
+        <a class="carousel-item" href="#three!"><img src="img/tp4.3.jpg"></a>
+        <a class="carousel-item" href="#four!"><img src="img/tp4.4.jpg" ></a>
+        <a class="carousel-item" href="#five!"><img src="img/tp4.5.jpg" ></a>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+    <!--TRABAJO 5-->
+    <div class="row">
+      <div class="col s12 m12">
+        <div class="">
+          <h4 id="tp5" class="amber-text text-darken-3">Trabajo Práctico #5  <a href="#inicio">↑</a> </h4>
+        </div>
+
+        <h5 class="amber-text text-darken-3">Video Juego</h5>
+        <a class="waves-effect waves-light orange darken-4 btn modal-trigger" href="https://github.com/MaleSantellan/tecnomultimedia/tree/tp5">Código en Github</a>
+        <p>Para este trabajo tuvimos que crear un videojuego hecho completamente en objetos relacionado con la aventura gráfica del TP4. Y éste debía ser pensado para reemplazar una de las pantallas de conflicto de la aventura gráfica.</p>
+        <p>Para el juego decidí representar el momento en que el hermano menor intenta escapar de la muerte, y al mismo tiempo, puse como condicion para que gane, que atrape las reliquias de la muerte.</p>
+      </div>
+      <div class="carousel">
+        <a class="carousel-item" href="#one!"><img src="img/tp5.jpg"></a>
+        <a class="carousel-item" href="#two!"><img src="img/tp5.2.jpg"></a>
+        <a class="carousel-item" href="#three!"><img src="img/tp5.3.jpg"></a>
+        <a class="carousel-item" href="#four!"><img src="img/tp5.4.jpg"></a>
+        <a class="carousel-item" href="#five!"><img src="img/tp5.5.jpg"></a>
+      </div>
+
+    </div>
+    <div class="divider"></div>
+    <!--TRABAJO 6-->
+    <div class="row">
+      <div class="col s12 m12">
+        <div class="tp6">
+          <h4 id="tp6" class="amber-text text-darken-4">Trabajo Práctico #6  <a href="#inicio">↑</a> </h4>
+        </div>
+
+        <h5 class="amber-text text-darken-4">Trabajo Final</h5>
+        <a class="waves-effect waves-light orange darken-4 btn modal-trigger" href="https://github.com/MaleSantellan/tecnomultimedia/tree/tp6">Código en Github</a>
+        <p>Para este trabajo teníamos que realizar la conversión del TP#4 hecho en programación procedural (funciones) a Programación Orientada a Objetos. Y luego incorporar el juego realizado en el TP#5, de forma de poder lograr una integración entre ambos TPs.</p>
+      </div>
+      <div class="s12 m12">
+        <div class="carousel carousel-slider">
+          <a class="carousel-item" href="#one!"><img src="img/tp6.jpg"></a>
+          <a class="carousel-item" href="#two!"><img src="img/tp6.2.jpg" ></a>
+          <a class="carousel-item" href="#three!"><img src="img/tp6.3.jpg"></a>
+          <a class="carousel-item" href="#four!"><img src="img/tp6.4.jpg" ></a>
+          <a class="carousel-item" href="#five!"><img src="img/tp6.5.jpg" ></a>
+        </div>
+        <p>Imagenes del trabajo final</p>
+      </div>
+    </div>
+  </div>
+
+  <!--PIE DE PAGINA -->
+  <div class="row">
+    <div class="s12">
+      <footer class="page-footer orange darken-3">
+        <div class="container">
+          <div class="row">
+            <div class="col l6 s12">
+              <h5 class="white-text">Gracias por llegar hasta acá:)</h5>
+              <img src="img/hi-good.gif" alt="">
+            </div>
+            <div class="col l4 offset-l2 s12">
+              <h5 class="white-text">Trabajos Prácticos</h5>
+              <ul>
+                <li><a class="grey-text text-lighten-3" href="#tp1">Trabajo #1</a></li>
+                <li><a class="grey-text text-lighten-3" href="#tp2">Trabajo #2</a></li>
+                <li><a class="grey-text text-lighten-3" href="#tp3">Trabajo #3</a></li>
+                <li><a class="grey-text text-lighten-3" href="#tp4">Trabajo #4</a></li>
+                <li><a class="grey-text text-lighten-3" href="#tp5">Trabajo #5</a></li>
+                <li><a class="grey-text text-lighten-3" href="#tp6">Trabajo #6</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer-copyright orange darken-4" >
+          <div class="container">
+            © 2014 Copyright
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  <!--JavaScript at end of body for optimized loading-->
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script type="text/javascript" src="js/inicial.js"></script>
+</body>
+</html>
