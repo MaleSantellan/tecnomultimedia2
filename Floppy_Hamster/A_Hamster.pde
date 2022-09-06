@@ -1,8 +1,10 @@
 class Hamster extends FCircle {
   Boolean vivo;
+  PImage ham;
   Hamster(float _r) {
     super(_r);
     vivo=true;
+    ham= loadImage("hamster.png");
   }
 
   void inicializar(float _x, float _y) {
@@ -11,7 +13,7 @@ class Hamster extends FCircle {
     setPosition(_x, _y);
     setDensity(20);
     attachImage(ham);
-    setRotatable(false);
+    
   }
 
   void morir() {

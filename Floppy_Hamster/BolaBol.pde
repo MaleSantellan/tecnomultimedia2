@@ -5,7 +5,6 @@ class BolaBol extends FCircle {
   }
 
   void inicializar(float _x, float _y) {
-
     setPosition(_x, _y);
     setDensity(20);
     attachImage(bbolgrand);

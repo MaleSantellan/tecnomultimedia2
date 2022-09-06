@@ -13,8 +13,6 @@ PImage platFija;
 PImage platAbajo;
 PImage boliche;
 PImage bbolgrand;
-PImage ham;
-PImage semilla;
 PImage PinchosDer;
 PImage PinchosIzq;
 PImage PinchosAbajo;
@@ -22,6 +20,7 @@ PImage Ancla;
 PImage burbuja;
 PImage platCirc;
 PImage Fondo;
+ArrayList <Semilla> semillas;
 
 
 //Parametros
@@ -38,6 +37,12 @@ Hamster hamster;
 
 void setup() {
   size(1600, 900);
+  semillas = new ArrayList <Semilla> ();
+  for (int i = 0; i < 5; i++)
+  {
+    Semilla s = new Semilla();
+    semillas.add(s);
+  }
 
   //fisica
   Fisica.init(this);
@@ -68,8 +73,6 @@ void setup() {
   boliche= loadImage("Bola_De_Boliche_.png");
   bbolgrand= loadImage("Bola_Mas_Grande.png");
   Fondo = loadImage("fondoPapel.png");
-  ham= loadImage("hamster.png");
-  semilla= loadImage("semilla.png");
   PinchosAbajo= loadImage("Parte_De_Abajo.png");
   PinchosIzq= loadImage("CostadoIzq.png");
   PinchosDer= loadImage("CostadoDer.png");
@@ -101,6 +104,7 @@ void draw() {
 
     mundo.step();
     mundo.draw();
+
 
     //-----------------------------------------------------------
 
@@ -145,6 +149,11 @@ void keyPressed() {
   case "Instruc":
     if (key == ENTER) {
       estado = "inicializaJuego";
+      for (int i=0; i < semillas.size(); i++)
+      {
+        semillas.get(i).resetear();
+      }
+      puntos = 0;
     }
     break;
   case "Perdiste":
@@ -168,6 +177,11 @@ void iniciarJuego() {
   hamster.inicializar(140, 96);
   mundo.add(hamster);
 
+  //Semillas
+  semillas.get(0).inicializar(540, 570);
+  semillas.get(1).inicializar(1097, 527);
+  semillas.get(2).inicializar(1497, 355);
+
   //-----------------------------------------------------------
   //Pinchos del lado derecho
   Bordes pinchosder = new Bordes(30, 800);
@@ -190,30 +204,25 @@ void iniciarJuego() {
   //-----------------------------------------------------------
   //Semillas
   //Semi1
-  Semilla semi1 = new Semilla(30, 60);
-  semi1.inicializar(540, 570);
-  mundo.add(semi1);
-
-  //Semi2
-  Semilla semi2 = new Semilla(30, 60);
-  semi2.inicializar(1097, 527);
-  mundo.add(semi2);
-
-
-  //Semi3
-  Semilla semi3 = new Semilla(30, 60);
-  semi3.inicializar(1497, 355);
-  mundo.add(semi3);
+  /*Semilla semi1 = new Semilla(30, 60);
+   semi1.inicializar(540, 570);
+   mundo.add(semi1);
+   
+   //Semi2
+   Semilla semi2 = new Semilla(30, 60);
+   semi2.inicializar(1097, 527);
+   mundo.add(semi2);
+   
+   
+   //Semi3
+   Semilla semi3 = new Semilla(30, 60);
+   semi3.inicializar(1497, 355);
+   mundo.add(semi3);*/
 
 
   //-----------------------------------------------------------
   //Barra que gira
   //Base 0 (3 - 23) camino1
-  /*PlatGira pgira0 = new PlatGira(200, 30);
-   pgira0.inicializar(128, 303);
-   mundo.add(pgira0.ancla);
-   mundo.add(pgira0.movimiento);
-   mundo.add(pgira0.revolute);*/
   FCircle ancla0 = new FCircle(20);
   ancla0.setPosition(128, 303);
   ancla0.setStatic(true);
@@ -833,12 +842,11 @@ void contactStarted(FContact contact) {
   FBody _cuerpo2 = contact.getBody2();
 
   /////////////////////////////SUMAR PUNTOS/////////////////////////////
-  if ((_cuerpo1.getName() == "hamster" && _cuerpo2.getName() == "semilla")
+  if (puntos>2 &&(_cuerpo1.getName() == "hamster" && _cuerpo2.getName() == "semilla")
     || (_cuerpo2.getName() == "hamster" && (_cuerpo1.getName() == "semilla" ))) {
-    puntos++;
-    if (puntos>2) {
-      ganar();
-    }
+    punto.play();
+    punto.amp(0.2);
+    ganar();
   }
 
 
@@ -848,6 +856,14 @@ void contactStarted(FContact contact) {
     if (hamster.vivo) {
       perder();
     }
+  }
+
+  if (_cuerpo1.getName() == "hamster" && _cuerpo2.getName() == "semilla") {
+    ((Semilla)_cuerpo2).agarrar();
+    punto.play();
+  } else if (_cuerpo2.getName() == "hamster" && _cuerpo1.getName() == "semilla") {
+    ((Semilla) _cuerpo1).agarrar();
+    punto.play();
   }
 }
 
@@ -860,6 +876,5 @@ void perder() {
 
 void ganar() {
   hamster.morir();
-  mundo.remove(semi1);
   estado = "Ganaste";
 }

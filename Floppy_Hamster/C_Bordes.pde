@@ -1,7 +1,7 @@
 class Bordes extends FBox {
   Boolean vivo;
-  Bordes(float _r,float _h) {
-    super(_r,_h);
+  Bordes(float _w,float _h) {
+    super(_w,_h);
   }
 
   void inicializar(float _x, float _y) {
@@ -9,7 +9,6 @@ class Bordes extends FBox {
     setPosition(_x, _y);
     setStatic(true);
     setGrabbable(false);
-    attachImage(ham);
   }
 
 }
